@@ -24,7 +24,7 @@
 
         <div class="relative z-10 text-center text-white px-4 flex flex-col items-center">
             <h1 class="text-6xl font-extrabold leading-tight transition duration-300 hover:scale-105 hover:text-teal-300">
-                Boost Your Productivity
+                Boost Your Productivity khansaaaaaaaaaaaaaaaaaa
             </h1>
             <p class="mt-4 text-lg text-gray-100">
                 Stay organized and achieve more with your personalized To-Do List.
