@@ -25,11 +25,8 @@
                             <a href="/todo/{{ $todo->id }}" class="text-[#4F6D7A] text-sm font-semibold hover:underline">
                                 Read more
                             </a>
-                            <p class="mt-2 text-lg font-semibold 
-    @class([
-        'text-green-600' => strtolower($todo->status) === 'done',
-        'text-red-600' => strtolower($todo->status) === 'pending',
-    ])">
+                            <p class="mt-2 text-sm font-semibold 
+    {{ strtolower(trim($todo->status)) == 'done' ? 'text-green-600' : 'text-red-600' }}">
     Status: {{ ucfirst($todo->status) }}
 </p>
                          
