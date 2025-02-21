@@ -10,17 +10,17 @@
 
                 <div>
                     <label for="title" class="block text-gray-500 font-medium">Title</label>
-                    <input type="text" id="title" name="title" class="w-full bg-white/70 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-500 focus:border-teal-500 p-3 shadow-sm" value="{{ $todo->title }}" required />
+                    <input type="text" id="title" name="title" class="w-full bg-white/70 border border-gray-300 text-gray-900 rounded-lg focus:ring-gray-500 focus:border-teal-500 p-3 shadow-sm" value="{{ $todo->title }}" required />
                 </div>
 
                 <div>
                     <label for="description" class="block text-gray-500 font-medium">Description</label>
-                    <input type="text" id="description" name="description" class="w-full bg-white/70 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-500 focus:border-teal-500 p-3 shadow-sm" value="{{ $todo->description }}" required />
+                    <input type="text" id="description" name="description" class="w-full bg-white/70 border border-gray-300 text-gray-900 rounded-lg focus:ring-gray-500 focus:border-teal-500 p-3 shadow-sm" value="{{ $todo->description }}" required />
                 </div>
 
                 <div>
                     <label for="status" class="block text-gray-500 font-medium">Status</label>
-                    <select id="status" name="status" class="w-full bg-white/70 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-500 focus:border-teal-500 p-3 shadow-sm">
+                    <select id="status" name="status" class="w-full bg-white/70 border border-gray-300 text-gray-900 rounded-lg focus:ring-gray-500 focus:border-gray-500 p-3 shadow-sm">
                         <option value="pending" {{ $todo->status == 'pending' ? 'selected' : '' }}>Pending</option>
                         <option value="done" {{ $todo->status == 'done' ? 'selected' : '' }}>Done</option>
                     </select>
@@ -28,7 +28,7 @@
 
                 <div>
                     <label for="image" class="block text-gray-500 font-medium">Upload New Image</label>
-                    <input type="file" id="image" name="image" class="w-full bg-white/70 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-500 focus:border-teal-500 p-3 shadow-sm" />
+                    <input type="file" id="image" name="image" class="w-full bg-white/70 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-500 focus:border-gray-500 p-3 shadow-sm" />
                 </div>
 
                 <!-- Preview gambar lama -->
