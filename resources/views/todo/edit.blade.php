@@ -34,7 +34,7 @@
                 <!-- Preview gambar lama -->
                 @if($todo->image)
                 <div class="text-center">
-                    <p class="text-white mb-2">Current Image:</p>
+                    <p class="text-gray-500 mb-2">Current Image:</p>
                     <img src="{{ Storage::url($todo->image) }}" alt="Current Image" class="w-full h-40 object-cover rounded-lg shadow-md">
                 </div>
                 @endif
