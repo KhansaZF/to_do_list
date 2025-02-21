@@ -1,7 +1,7 @@
 <x-app-layout>
     
 
-    <div class="py-12 bg-gradient-to-r from-blue-500 via-teal-400 to-blue-600 min-h-screen flex items-center justify-center">
+    <div class="py-12 bg-[#85A1AE] min-h-screen flex items-center justify-center">
         <div class="max-w-md w-full bg-white/30 backdrop-blur-md shadow-lg rounded-lg p-6">
             <h2 class="text-3xl font-bold text-center text-white mb-6">Edit To-Do</h2>
             <form class="space-y-4" method="POST" action="/todo/{{ $todo->id }}" enctype="multipart/form-data">
@@ -39,7 +39,7 @@
                 </div>
                 @endif
 
-                <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 shadow-md">
+                <button type="submit" class="w-full bg-[#4F6D7A] hover:bg-[#3E5864] shadow-md">
                     Update
                 </button>
             </form>
