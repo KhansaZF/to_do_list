@@ -18,7 +18,7 @@
             <!-- Logo & Menu -->
             <div class="flex items-center space-x-4">
                 <!-- Tambahkan Logo -->
-                <img src="{{ asset('storage/images/logo.jpeg') }}" alt="Logo" class="h-10 w-10 rounded-full shadow-md">
+                
                 
                 <a href="{{ route('dashboard') }}" class="text-lg font-semibold hover:text-gray-700">Dashboard</a>
                 <a href="{{ route('todo.index') }}" class="text-lg font-semibold hover:text-gray-700">To-Do List</a>
