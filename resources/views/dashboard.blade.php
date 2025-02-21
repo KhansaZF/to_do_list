@@ -5,7 +5,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6">
             
             <!-- Card: Apa Itu To-Do List -->
-            <div class="bg-[#657f38] text-gray-200 shadow-lg rounded-lg p-6">
+            <div class="bg-[#f1f0E5] text-gray-200 shadow-lg rounded-lg p-6">
                 <h3 class="text-2xl font-bold mb-3">📌 Apa Itu To-Do List?</h3>
                 <p>
                     To-Do List adalah daftar tugas yang harus diselesaikan dalam jangka waktu tertentu.
@@ -14,7 +14,7 @@
             </div>
 
             <!-- Card: Manfaat To-Do List -->
-            <div class="bg-[#657f38] text-gray-200 shadow-lg rounded-lg p-6">
+            <div class="bg-[#f1f0E5] text-gray-200 shadow-lg rounded-lg p-6">
                 <h3 class="text-2xl font-bold mb-3">🎯 Manfaat To-Do List</h3>
                 <ul class="list-disc pl-6">
                     <li>Mempermudah pengelolaan waktu dan prioritas.</li>
@@ -25,7 +25,7 @@
             </div>
 
             <!-- Card: Fitur dalam Aplikasi -->
-            <div class="bg-[#657f38] text-gray-200 shadow-lg rounded-lg p-6">
+            <div class="bg-[#f1f0E5] text-gray-200 shadow-lg rounded-lg p-6">
                 <h3 class="text-2xl font-bold mb-3">✨ Fitur dalam Aplikasi Ini</h3>
                 <ul class="list-disc pl-6">
                     <li>✅ Menambahkan tugas baru.</li>
@@ -36,7 +36,7 @@
             </div>
 
             <!-- Card: Jenis-Jenis To-Do List -->
-            <div class="bg-[#657f38] text-gray-200 shadow-lg rounded-lg p-6">
+            <div class="bg-[#f1f0E5] text-gray-200 shadow-lg rounded-lg p-6">
                 <h3 class="text-2xl font-bold mb-3">📋 Jenis-Jenis To-Do List</h3>
                 <ul class="list-disc pl-6">
                     <li><strong>Personal To-Do List:</strong> Daftar tugas pribadi seperti belanja, olahraga, dan membaca.</li>
