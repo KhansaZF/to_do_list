@@ -3,23 +3,23 @@
 
     <div class="py-12 bg-[#85A1AE] min-h-screen flex items-center justify-center">
         <div class="max-w-md w-full bg-white/30 backdrop-blur-md shadow-lg rounded-lg p-6">
-            <h2 class="text-3xl font-bold text-center text-white mb-6">Edit To-Do</h2>
+            <h2 class="text-3xl font-bold text-center text-gray-500 mb-6">Edit To-Do</h2>
             <form class="space-y-4" method="POST" action="/todo/{{ $todo->id }}" enctype="multipart/form-data">
                 @csrf
                 @method('PATCH')
 
                 <div>
-                    <label for="title" class="block text-white font-medium">Title</label>
+                    <label for="title" class="block text-gray-500 font-medium">Title</label>
                     <input type="text" id="title" name="title" class="w-full bg-white/70 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-500 focus:border-teal-500 p-3 shadow-sm" value="{{ $todo->title }}" required />
                 </div>
 
                 <div>
-                    <label for="description" class="block text-white font-medium">Description</label>
+                    <label for="description" class="block text-gray-500 font-medium">Description</label>
                     <input type="text" id="description" name="description" class="w-full bg-white/70 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-500 focus:border-teal-500 p-3 shadow-sm" value="{{ $todo->description }}" required />
                 </div>
 
                 <div>
-                    <label for="status" class="block text-white font-medium">Status</label>
+                    <label for="status" class="block text-gray-500 font-medium">Status</label>
                     <select id="status" name="status" class="w-full bg-white/70 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-500 focus:border-teal-500 p-3 shadow-sm">
                         <option value="pending" {{ $todo->status == 'pending' ? 'selected' : '' }}>Pending</option>
                         <option value="done" {{ $todo->status == 'done' ? 'selected' : '' }}>Done</option>
@@ -27,7 +27,7 @@
                 </div>
 
                 <div>
-                    <label for="image" class="block text-white font-medium">Upload New Image</label>
+                    <label for="image" class="block text-gray-500 font-medium">Upload New Image</label>
                     <input type="file" id="image" name="image" class="w-full bg-white/70 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-500 focus:border-teal-500 p-3 shadow-sm" />
                 </div>
 
