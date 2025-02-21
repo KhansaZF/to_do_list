@@ -12,7 +12,7 @@
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-teal-200">
+<body class="#1D1D2C">
     <nav class="bg-cyan-600 text-gray-800 shadow-md p-4">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo & Menu -->
