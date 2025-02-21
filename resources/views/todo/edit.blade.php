@@ -21,8 +21,8 @@
                 <div>
                     <label for="status" class="block text-gray-500 font-medium">Status</label>
                     <select id="status" name="status" class="w-full bg-white/70 border border-gray-300 text-gray-900 rounded-lg focus:ring-gray-500 focus:border-gray-500 p-3 shadow-sm">
-                        <option value="pending" {{ $todo->status == 'pending' ? 'selected' : '' }}>Pending</option>
-                        <option value="done" {{ $todo->status == 'done' ? 'selected' : '' }}>Done</option>
+                        <option value="pending" {{ $todo->status == 'pending' ? 'selected' : '' }}>pending</option>
+                        <option value="done" {{ $todo->status == 'done' ? 'selected' : '' }}>done</option>
                     </select>
                 </div>
 
