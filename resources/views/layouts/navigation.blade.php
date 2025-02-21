@@ -20,13 +20,13 @@
                 <!-- Tambahkan Logo -->
                 <img src="{{ asset('storage/images/logo.jpeg') }}" alt="Logo" class="h-10 w-10 rounded-full shadow-md">
                 
-                <a href="{{ route('dashboard') }}" class="text-lg font-semibold hover:text-gray-300">Dashboard</a>
-                <a href="{{ route('todo.index') }}" class="text-lg font-semibold hover:text-gray-300">To-Do List</a>
+                <a href="{{ route('dashboard') }}" class="text-lg font-semibold hover:text-gray-700">Dashboard</a>
+                <a href="{{ route('todo.index') }}" class="text-lg font-semibold hover:text-gray-700">To-Do List</a>
             </div>
 
             <!-- Dropdown User -->
             <div x-data="{ open: false }" class="relative">
-                <button @click="open = !open" class="flex items-center space-x-2 hover:text-teal-300 focus:outline-none">
+                <button @click="open = !open" class="flex items-center space-x-2 hover:text-gray-700 focus:outline-none">
                     <!-- Avatar User -->
                     <img class="w-10 h-10 rounded-full border-2 border-gray-800 shadow-md" 
                          src="{{ Auth::user()->avatar ? asset('storage/' . Auth::user()->avatar) : asset('storage/images/avatar.jpeg') }}" 
@@ -38,10 +38,10 @@
                 </button>
 
                 <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-48 bg-white text-gray-900 rounded-md shadow-lg py-2">
-                    <a href="{{ route('profile.edit') }}" class="block px-4 py-2 hover:bg-teal-300">Profile</a>
+                    <a href="{{ route('profile.edit') }}" class="block px-4 py-2 hover:bg-gray-700">Profile</a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="block w-full text-left px-4 py-2 hover:bg-teal-300">Logout</button>
+                        <button type="submit" class="block w-full text-left px-4 py-2 hover:bg-gray-700">Logout</button>
                     </form>
                 </div>
             </div>
