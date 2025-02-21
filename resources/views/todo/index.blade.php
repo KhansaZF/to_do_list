@@ -25,9 +25,14 @@
                             <a href="/todo/{{ $todo->id }}" class="text-[#4F6D7A] text-sm font-semibold hover:underline">
                                 Read more
                             </a>
-                            <p class="mt-2 text-sm {{ $todo->status === 'Completed' ? 'text-green-600' : 'text-red-600' }}">
-                                Status: {{ $todo->status }}
-                            </p>                            
+                            <p class="mt-2 text-sm font-semibold 
+    @class([
+        'text-green-600' => $todo->status === 'done',
+        'text-red-600' => $todo->status === 'pending',
+    ])">
+    Status: {{ ucfirst($todo->status) }}
+</p>
+                         
                             <p class="mt-2 text-sm text-gray-500">Owned by: {{ $todo->user->name }}</p>
                             <div class="flex justify-between items-center mt-4">
                                 <a href="/todo/{{ $todo->id }}/edit" class="bg-[#85A1AE] hover:bg-[#6F8B97] 
