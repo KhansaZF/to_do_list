@@ -39,7 +39,7 @@
                 </div>
                 @endif
 
-                <button type="submit" class="w-full bg-[#4F6D7A] hover:bg-[#3E5864] shadow-md">
+                <button type="submit" class="w-full bg-[#4F6D7A] hover:bg-[#3E5864] text-white font-bold py-3 px-4 rounded-lg transition duration-300 shadow-md">
                     Update
                 </button>
             </form>
