@@ -17,16 +17,16 @@
     <body class="font-sans text-gray-900 antialiased bg-cover bg-center" 
           style="background-image: url('{{ asset('storage/images/register.jpg') }}');">
 
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gradient-to-r from-blue-500 via-teal-400 to-blue-700 bg-opacity-80 backdrop-blur-md">
+        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gradient-to-r from-[#B1E4EA] via-[#85A1AE] to-[#EDF8F9] bg-opacity-80 backdrop-blur-md">
             <!-- Logo -->
             <div>
                 <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-white" />
+                    <x-application-logo class="w-20 h-20 fill-current text-[#85A1AE]" />
                 </a>
             </div>
 
             <!-- Card Container -->
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white/30 shadow-lg rounded-lg backdrop-blur-md">
+            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white/40 shadow-lg rounded-lg backdrop-blur-md border border-[#85A1AE]">
                 {{ $slot }}
             </div>
         </div>
