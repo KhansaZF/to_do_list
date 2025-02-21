@@ -20,8 +20,8 @@
                 <!-- Tambahkan Logo -->
                 <img src="{{ asset('storage/images/logo.jpeg') }}" alt="Logo" class="h-10 w-10 rounded-full shadow-md">
                 
-                <a href="{{ route('dashboard') }}" class="text-lg font-semibold hover:text-teal-300">Dashboard</a>
-                <a href="{{ route('todo.index') }}" class="text-lg font-semibold hover:text-teal-300">To-Do List</a>
+                <a href="{{ route('dashboard') }}" class="text-lg font-semibold hover:text-gray-300">Dashboard</a>
+                <a href="{{ route('todo.index') }}" class="text-lg font-semibold hover:text-gray-300">To-Do List</a>
             </div>
 
             <!-- Dropdown User -->
