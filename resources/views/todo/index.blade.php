@@ -27,8 +27,8 @@
                             </a>
                             <p class="mt-2 text-sm font-semibold 
     @class([
-        'text-green-600' => $todo->status === 'done',
-        'text-red-600' => $todo->status === 'pending',
+        'text-green-600' => strtolower($todo->status) === 'done',
+        'text-red-600' => strtolower($todo->status) === 'pending',
     ])">
     Status: {{ ucfirst($todo->status) }}
 </p>
