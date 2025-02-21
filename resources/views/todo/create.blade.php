@@ -16,7 +16,7 @@
                 </div>
 
                 <div>
-                    <label for="status" class="block text-gray-700 font-medium">Status</label>
+                    <label for="status" class="block text-gray-700 font-medium">Status ToDo</label>
                     <select id="status" name="status" class="w-full bg-white/80 border border-gray-300 text-gray-900 rounded-lg focus:ring-[#85A1AE] focus:border-[#85A1AE] p-3 shadow-sm">
                         <option value="pending">Pending</option>
                         <option value="done">Done</option>
