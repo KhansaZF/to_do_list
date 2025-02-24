@@ -27,10 +27,6 @@
             <!-- Dropdown User -->
             <div x-data="{ open: false }" class="relative">
                 <button @click="open = !open" class="flex items-center space-x-2 hover:text-gray-700 focus:outline-none">
-                    <!-- Avatar User -->
-                    <img class="w-10 h-10 rounded-full border-2 border-gray-800 shadow-md" 
-                         src="{{ Auth::user()->avatar ? asset('storage/' . Auth::user()->avatar) : asset('storage/images/avatar.jpeg') }}" 
-                         alt="User Avatar">
                     <span class="text-lg font-semibold">{{ Auth::user()->name }}</span>
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
