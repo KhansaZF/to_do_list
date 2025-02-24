@@ -1,13 +1,9 @@
-<?php
-
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ToDoController;
 use Illuminate\Support\Facades\Route;
 
 // Halaman Home (Dapat diakses tanpa login)
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [ToDoController::class, 'home'])->name('home');
 
 // Halaman Welcome (jika masih ingin dipakai)
 Route::get('/welcome', function () {
