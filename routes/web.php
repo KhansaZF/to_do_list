@@ -1,3 +1,5 @@
+<?php
+
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ToDoController;
 use Illuminate\Support\Facades\Route;
