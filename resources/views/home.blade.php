@@ -49,5 +49,27 @@
         </div>
     </section>
 
+    <!-- Completed To-Do List -->
+    <section class="mt-12 px-6 py-8">
+        <h2 class="text-3xl font-bold text-center text-[#85A1AE]">Completed Tasks</h2>
+        <div class="mt-6 max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+            @if ($completedTodos->isEmpty())
+                <p class="text-gray-600 text-center">No completed tasks available.</p>
+            @else
+                <ul class="list-none space-y-4">
+                    @foreach ($completedTodos as $todo)
+                        <li class="p-4 border border-gray-300 rounded-lg bg-[#EDF8F9] shadow-sm transition hover:shadow-md">
+                            <p class="text-lg font-semibold text-gray-900">{{ $todo->title }}</p>
+                            <p class="text-sm text-gray-600">{{ $todo->description }}</p>
+                            @if($todo->image)
+                                <img src="{{ asset('storage/' . $todo->image) }}" class="mt-2 w-32 h-32 rounded-lg shadow-md" alt="Task Image">
+                            @endif
+                        </li>
+                    @endforeach
+                </ul>
+            @endif
+        </div>
+    </section>
+
 </body>
 </html>
