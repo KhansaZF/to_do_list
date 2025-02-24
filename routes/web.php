@@ -35,7 +35,7 @@ Route::middleware(['auth'])->group(function () {
     Route::patch('/todo/{id}', [ToDoController::class, 'update']);
     Route::delete('/todo/{id}', [ToDoController::class, 'destroy']);
     Route::get('/todo/{id}', [ToDoController::class, 'show'])->name('todo.show');
-
+    Route::get('/', [ToDoController::class, 'completedTodos'])->name('home');
 });
 
 require __DIR__.'/auth.php';
