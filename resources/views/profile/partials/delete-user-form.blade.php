@@ -1,10 +1,10 @@
-<section class="bg-gradient-to-r from-blue-100 to-teal-200 p-8 rounded-lg shadow-lg space-y-6">
+<section class="bg-gradient-to-r from-[#85A1AE] to-[#B1E4EA] p-8 rounded-lg shadow-lg space-y-6">
     <header>
-        <h2 class="text-2xl font-bold text-blue-800">
+        <h2 class="text-2xl font-bold text-[#37474F]">
             {{ __('Delete Account') }}
         </h2>
 
-        <p class="mt-1 text-sm text-blue-600">
+        <p class="mt-1 text-sm text-[#455A64]">
             {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
         </p>
     </header>
@@ -18,15 +18,15 @@
     </x-danger-button>
 
     <x-modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
-        <form method="post" action="{{ route('profile.destroy') }}" class="p-6 bg-white rounded-lg shadow-xl">
+        <form method="post" action="{{ route('profile.destroy') }}" class="p-6 bg-[#EDF8F9] rounded-lg shadow-xl">
             @csrf
             @method('delete')
 
-            <h2 class="text-lg font-medium text-blue-900">
+            <h2 class="text-lg font-medium text-[#37474F]">
                 {{ __('Are you sure you want to delete your account?') }}
             </h2>
 
-            <p class="mt-1 text-sm text-blue-600">
+            <p class="mt-1 text-sm text-[#455A64]">
                 {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
             </p>
 
@@ -37,7 +37,7 @@
                     id="password"
                     name="password"
                     type="password"
-                    class="mt-1 block w-3/4 border border-blue-400 rounded-lg focus:ring-teal-500 focus:border-teal-500 shadow-sm"
+                    class="mt-1 block w-3/4 border border-[#85A1AE] rounded-lg focus:ring-[#B1E4EA] focus:border-[#B1E4EA] shadow-sm"
                     placeholder="{{ __('Password') }}"
                 />
 
