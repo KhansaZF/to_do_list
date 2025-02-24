@@ -104,5 +104,11 @@ public function show($id)
     $todo = to_dos::findOrFail($id);
     return view('todo.show', compact('todo'));
 }
+public function completedTodos()
+{
+    $completedTodos = to_dos::where('status', 'done')->latest()->get();
+    return view('home', compact('completedTodos'));
+}
+
 
     }
