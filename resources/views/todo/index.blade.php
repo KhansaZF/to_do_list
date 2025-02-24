@@ -3,10 +3,12 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white/80 shadow-md sm:rounded-lg p-6">
                 
-                <div class="flex justify-between items-center mb-4">
-                    <h1 class="text-3xl font-mono text-gray-800">
-                        Welcome to To-Do List 
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500 animate-pulse">
+                        Welcome to <span class="font-pacifico">To-Do List</span>
                     </h1>
+                </div>
+                
                     <a href="{{ route('todo.create') }}" class="bg-[#4F6D7A] hover:bg-[#3E5864] 
                     text-white font-bold py-2 px-4 rounded-lg transition duration-300 shadow-md">
                         Buat Baru
