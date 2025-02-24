@@ -4,7 +4,7 @@
             <div class="bg-white/80 shadow-md sm:rounded-lg p-6">
                 
                 <div class="flex justify-between items-center mb-4">
-                    <h1 class="text-3xl font-bold text-gray-800">
+                    <h1 class="text-3xl font-mono text-gray-800">
                         Welcome to To-Do List 
                     </h1>
                     <a href="{{ route('todo.create') }}" class="bg-[#4F6D7A] hover:bg-[#3E5864] 
