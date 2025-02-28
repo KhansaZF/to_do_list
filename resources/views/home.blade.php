@@ -71,5 +71,10 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="mt-12 py-6 bg-[#85A1AE] text-white text-center">
+        <p class="text-lg">&copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
