@@ -34,7 +34,22 @@
                                      class="w-16 h-16 object-cover rounded-full border border-gray-300">
                             </td>
                             <td class="py-4 px-5 text-gray-800 font-medium">{{ $todo->title }}</td>
-                            <td class="py-4 px-5 text-gray-600 line-clamp-1">{{ $todo->description }}</td>
+                            <td class="py-4 px-5 text-gray-600">
+                                <div x-data="{ expanded: false }">
+                                    <span x-show="!expanded">
+                                        {{ Str::limit($todo->description, 50) }}...
+                                    </span>
+                                    <span x-show="expanded">
+                                        {{ $todo->description }}
+                                    </span>
+                                    <button @click="expanded = !expanded" 
+                                        class="text-blue-500 underline ml-2 transition-transform transform hover:scale-105">
+                                        <span x-show="!expanded">Read More</span>
+                                        <span x-show="expanded">Read Less</span>
+                                    </button>
+                                </div>
+                            </td>
+                            
                             <td class="py-4 px-5 font-semibold 
                                 {{ strtolower(trim($todo->status)) == 'done' ? 'text-green-600' : 'text-red-600' }}">
                                 {{ ucfirst($todo->status) }}
