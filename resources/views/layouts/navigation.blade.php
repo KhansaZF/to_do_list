@@ -17,7 +17,7 @@
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo & Menu -->
             <div class="flex items-center space-x-4">
-                <!-- Tambahkan Logo -->
+                
                 
                 
                 <a href="{{ route('dashboard') }}" class="text-lg font-semibold hover:text-gray-700">Dashboard</a>
