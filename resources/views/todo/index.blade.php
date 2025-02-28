@@ -54,6 +54,41 @@
                     </tbody>
                 </table>
             </div>
+
+            <!-- Pagination -->
+            @if ($todos->hasPages())
+                <div class="flex flex-col items-center mt-8 space-y-2">
+                    <span class="text-sm text-gray-600">
+                        Menampilkan <span class="font-semibold text-gray-900">{{ $todos->firstItem() }}</span> - 
+                        <span class="font-semibold text-gray-900">{{ $todos->lastItem() }}</span> dari 
+                        <span class="font-semibold text-gray-900">{{ $todos->total() }}</span> entri
+                    </span>
+
+                    <div class="flex items-center space-x-2">
+                        @if ($todos->onFirstPage())
+                            <span class="flex items-center px-4 py-2 text-gray-400 bg-gray-200 rounded-full cursor-not-allowed">
+                                ⬅️ Prev
+                            </span>
+                        @else
+                            <a href="{{ $todos->previousPageUrl() }}" 
+                               class="flex items-center px-4 py-2 text-white bg-indigo-500 rounded-full shadow-md hover:bg-indigo-600 transition">
+                                ⬅️ Prev
+                            </a>
+                        @endif
+
+                        @if ($todos->hasMorePages())
+                            <a href="{{ $todos->nextPageUrl() }}" 
+                               class="flex items-center px-4 py-2 text-white bg-indigo-500 rounded-full shadow-md hover:bg-indigo-600 transition">
+                                Next ➡️
+                            </a>
+                        @else
+                            <span class="flex items-center px-4 py-2 text-gray-400 bg-gray-200 rounded-full cursor-not-allowed">
+                                Next ➡️
+                            </span>
+                        @endif
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
 </x-app-layout>
