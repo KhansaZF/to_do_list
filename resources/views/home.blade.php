@@ -52,21 +52,19 @@
     <!-- Completed To-Do List -->
     <section class="mt-12 px-6 py-8">
         <h2 class="text-3xl font-bold text-center text-[#85A1AE]">Completed Tasks</h2>
-        <div class="mt-6 max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <div class="mt-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @if ($completedTodos->isEmpty())
-                <p class="text-gray-600 text-center">No completed tasks available.</p>
+                <p class="text-gray-600 text-center col-span-full">No completed tasks available.</p>
             @else
-                <ul class="list-none space-y-4">
-                    @foreach ($completedTodos as $todo)
-                        <li class="p-4 border border-gray-300 rounded-lg bg-[#EDF8F9] shadow-sm transition hover:shadow-md">
-                            <p class="text-lg font-semibold text-gray-900">{{ $todo->title }}</p>
-                            <p class="text-sm text-gray-600">{{ $todo->description }}</p>
-                            @if($todo->image)
-                                <img src="{{ asset('storage/' . $todo->image) }}" class="mt-2 w-32 h-32 rounded-lg shadow-md" alt="Task Image">
-                            @endif
-                        </li>
-                    @endforeach
-                </ul>
+                @foreach ($completedTodos as $todo)
+                    <div class="bg-white p-6 rounded-xl shadow-lg transition hover:shadow-xl flex flex-col items-center">
+                        <h3 class="text-xl font-bold text-gray-900">{{ $todo->title }}</h3>
+                        <p class="text-sm text-gray-600">{{ $todo->description }}</p>
+                        @if($todo->image)
+                            <img src="{{ asset('storage/' . $todo->image) }}" class="mt-4 w-full h-48 object-cover rounded-lg shadow-md" alt="Task Image">
+                        @endif
+                    </div>
+                @endforeach
             @endif
         </div>
     </section>
