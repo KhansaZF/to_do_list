@@ -2,7 +2,7 @@
     <div class="py-12 bg-[#f4f7fb] min-h-screen flex justify-center">
         <div class="w-full max-w-5xl bg-white shadow-lg rounded-xl p-6">
             <div class="flex justify-between items-center mb-6">
-                <h1 class="text-4xl font-extrabold text-gray-800 text-center 
+                <h1 class="text-4xl font-extrabold text-gray-500 text-center 
     bg-gradient-to-r from-[#85A1AE] to-[#B1E4EA] bg-clip-text text-transparent 
     drop-shadow-lg animate-fadeIn">
     Welcome to To-Do List
