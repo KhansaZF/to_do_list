@@ -14,7 +14,7 @@ class ToDoController extends Controller
     {
         // Mengambil semua data dari model to_dos,dimana mengambil field user id yg user nya adalah user yg login saat ini
         $todos = to_dos::where('user_id', Auth::id())->get();
-        $todos = to_dos::paginate(6);
+        $todos = to_dos::paginate(5);
 
 
         // Mengirim data ke view
