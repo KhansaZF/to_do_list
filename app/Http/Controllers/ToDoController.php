@@ -13,8 +13,8 @@ class ToDoController extends Controller
     public function index()
     {
         // Mengambil semua data dari model to_dos,dimana mengambil field user id yg user nya adalah user yg login saat ini
-        $todos = to_dos::where('user_id', Auth::id())->get();
-        $todos = to_dos::paginate(5);
+        $todos = to_dos::where('user_id', Auth::id())->paginate(5);
+        
 
 
         // Mengirim data ke view
@@ -57,13 +57,13 @@ class ToDoController extends Controller
      */
 public function edit($id)
 {
-    $todo = to_dos::findOrFail($id);
+    $todo = to_dos::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
     return view('todo.edit', compact('todo'));
 }
 
 public function update(Request $request, $id)
 {
-    $todo = to_dos::findOrFail($id);
+    $todo = to_dos::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
 
     $validate = $request->validate([
         'title' =>'required|string',       
@@ -88,7 +88,7 @@ public function update(Request $request, $id)
 
 public function destroy($id)
 {
-    $todo = to_dos::findOrFail($id);
+    $todo = to_dos::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
 
     if($todo->image){
         Storage::delete('public/' . $todo->image);
