@@ -12,6 +12,11 @@
                    class="bg-[#85A1AE] hover:bg-[#B1E4EA] text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300">
                     Buat Baru
                 </a>
+
+                <button onclick="printTable()" 
+                class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300">
+            🖨 Print
+        </button>
             </div>
             
             <div class="overflow-x-auto">
