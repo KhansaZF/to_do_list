@@ -54,20 +54,28 @@
                                 {{ strtolower(trim($todo->status)) == 'done' ? 'text-green-600' : 'text-red-600' }}">
                                 {{ ucfirst($todo->status) }}
                             </td>
-                            <td class="py-4 px-5 text-gray-700">{{ $todo->user->name }}</td>
+
+                            <td class="py-4 px-5 text-gray-700">
+                                {{ $todo->user ? $todo->user->name : 'Unknown' }}
+                            </td>
+
                             <td class="py-4 px-5 flex justify-center space-x-2">
-                                <a href="/todo/{{ $todo->id }}/edit" 
-                                   class="bg-[#B1E4EA] hover:bg-[#85A1AE] text-gray-800 text-sm font-bold py-2 px-4 rounded-lg transition">
-                                    Edit
-                                </a>
-                                <form action="/todo/{{ $todo->id }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" 
-                                            class="bg-[#EDF8F9] hover:bg-[#B1E4EA] text-red-600 text-sm font-bold py-2 px-4 rounded-lg transition">
-                                        Delete
-                                    </button>
-                                </form>
+                                @if ($todo->user_id === Auth::id())
+                                    <a href="/todo/{{ $todo->id }}/edit" 
+                                       class="bg-[#B1E4EA] hover:bg-[#85A1AE] text-gray-800 text-sm font-bold py-2 px-4 rounded-lg transition">
+                                        Edit
+                                    </a>
+                                    <form action="/todo/{{ $todo->id }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus To-Do ini?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" 
+                                                class="bg-[#EDF8F9] hover:bg-[#B1E4EA] text-red-600 text-sm font-bold py-2 px-4 rounded-lg transition">
+                                            Delete
+                                        </button>
+                                    </form>
+                                @else
+                                    <span class="text-gray-400 italic">Akses Ditolak</span>
+                                @endif
                             </td>
                         </tr>
                         @endforeach

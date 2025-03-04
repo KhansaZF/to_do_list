@@ -58,7 +58,7 @@ class User extends Authenticatable
          */
         public function ToDo(): HasMany
         {
-            return $this->hasMany(to_dos::class, 'user_id', 'id');
+            return $this->hasMany(to_dos::class, 'user_id', );
         }
 
 }

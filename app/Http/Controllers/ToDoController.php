@@ -13,10 +13,8 @@ class ToDoController extends Controller
     public function index()
     {
         // Mengambil semua data dari model to_dos,dimana mengambil field user id yg user nya adalah user yg login saat ini
-        $todos = to_dos::where('user_id', Auth::id())->paginate(5);
+        $todos = to_dos::where('user_id', Auth::id())->with('user')->paginate(5);
         
-
-
         // Mengirim data ke view
         return view('todo.index', compact('todos'));
     }
@@ -57,47 +55,61 @@ class ToDoController extends Controller
      */
 public function edit($id)
 {
-    $todo = to_dos::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
+    $todo = to_dos::findOrFail($id);
+    if ($todo->user_id !== Auth::id()){
+        return redirect()->route('todo.index')->with('error', 'Anda tidak memiliki izin untuk mengedit To-Do ini.');
+    }
     return view('todo.edit', compact('todo'));
 }
 
 public function update(Request $request, $id)
 {
-    $todo = to_dos::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
+    $todo = to_dos::findOrFail($id);
+
+    // Cek apakah To-Do ini milik user yang sedang login
+    if ($todo->user_id !== Auth::id()) {
+        return redirect()->route('todo.index')->with('error', 'Anda tidak memiliki izin untuk mengedit To-Do ini.');
+    }
 
     $validate = $request->validate([
-        'title' =>'required|string',       
-        'description' =>'required|string',       
-        'status' =>'required|in:pending,done', 
-        'image' =>'nullable|mimes:jpg,png,jpeg|max:2048', 
+        'title'       => 'required|string',       
+        'description' => 'required|string',       
+        'status'      => 'required|in:pending,done', 
+        'image'       => 'nullable|mimes:jpg,png,jpeg|max:2048', 
     ]);
 
-    if($request->hasFile('image')){
-        if($todo->image){
+    if ($request->hasFile('image')) {
+        if ($todo->image) {
             Storage::delete('public/' . $todo->image);
         }
-
-        $gambar = $request->file('image')->store('images','public');
+        $gambar = $request->file('image')->store('images', 'public');
         $validate['image'] = $gambar;
     }
 
     $todo->update($validate);
 
-    return redirect()->route('todo.index');
+    return redirect()->route('todo.index')->with('success', 'To-Do berhasil diperbarui!');
 }
+
 
 public function destroy($id)
 {
-    $todo = to_dos::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
+    $todo = to_dos::findOrFail($id);
 
-    if($todo->image){
+    // Cek apakah To-Do ini milik user yang sedang login
+    if ($todo->user_id !== Auth::id()) {
+        return redirect()->route('todo.index')->with('error', 'Anda tidak memiliki izin untuk menghapus To-Do ini.');
+    }
+
+    if ($todo->image) {
         Storage::delete('public/' . $todo->image);
     }
 
     $todo->delete();
 
-    return redirect()->route('todo.index');
+    return redirect()->route('todo.index')->with('success', 'To-Do berhasil dihapus!');
 }
+
 
 public function show($id)
 {
