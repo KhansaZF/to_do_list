@@ -13,7 +13,7 @@ class ToDoController extends Controller
     public function index()
     {
         // Mengambil semua data dari model to_dos,dimana mengambil field user id yg user nya adalah user yg login saat ini
-        $todos = to_dos::where('user_id', Auth::id())->with('user')->paginate(5);
+        $todos = to_dos::where('user_id', Auth::id())->with('user')->orderBy('created_at', 'desc')->paginate(5);
         
         // Mengirim data ke view
         return view('todo.index', compact('todos'));
