@@ -17,7 +17,7 @@
                     </a>
 
                     <button onclick="printTable()" 
-                            class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md transition duration-300 flex items-center space-x-2">
+                            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md transition duration-300 flex items-center space-x-2">
                         🖨 <span>Print</span>
                     </button>
                 </div>
