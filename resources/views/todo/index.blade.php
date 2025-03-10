@@ -125,7 +125,7 @@
     <style>
         @media print {
             .hidden-print {
-                display: none !important;  
+                display: none !important;
             }
         }
     </style>
