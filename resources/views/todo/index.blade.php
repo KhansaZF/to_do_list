@@ -125,15 +125,15 @@
     <style>
         @media print {
             .hidden-print {
-                display: none !important;
+                display: none !important;  
             }
         }
     </style>
 
     <!-- JavaScript untuk Print -->
     <script>
-        function printTable() {
-            window.print();
+        function printTable() {  //mendefinisikan sebuah fungsi bernama printTable(), fungsi ini akan dipanggil jika tombol Print di klik.
+            window.print();  //fungsi bawaan JavaScript yang membuka dialog cetak pada browser.
         }
     </script>
 </x-app-layout>
